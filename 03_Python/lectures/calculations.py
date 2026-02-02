@@ -1,8 +1,10 @@
 def line_total(qty, unit_price, discount=0.0):
     return round(qty * unit_price * (1 - discount), 2)
 
+
 def add_vat(amount, vat_rate=0.21):
     return round(amount * (1 + vat_rate), 2)
+
 
 def revenue_by_channel(lines):
     result = {}

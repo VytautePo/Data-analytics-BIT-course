@@ -1,10 +1,10 @@
 #### Problem 1
 
 # Write code that:
-#- Allows the user to input numbers a and b (int or float)
-#- Prints "a is less than b" if that is true
-#- Prints "a is equal to b" if that is true
-#- Prints "a is greater than b" if that is true
+# - Allows the user to input numbers a and b (int or float)
+# - Prints "a is less than b" if that is true
+# - Prints "a is equal to b" if that is true
+# - Prints "a is greater than b" if that is true
 
 #  Tip: Use input, if, elif, and else statements
 
