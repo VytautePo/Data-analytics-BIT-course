@@ -3,8 +3,8 @@
 
 #1.create today's date
 
-import datetime
 import calendar
+import datetime
 
 today = datetime.date.today()
 print("1) Today:", today)
@@ -132,40 +132,87 @@ except ZeroDivisionError:
 
 #12. Try to open a non-existent file and handle FileNotFoundError.
 
-
+try:
+    with open("non_existing_file.csv") as f:
+        content = f.read()
+except FileNotFoundError:
+    print("12) File not found!")
 
 #13. Try to convert the text 'abc' to int and handle ValueError.
 
-
+try:
+    x = int("abc")
+except ValueError:
+    print("13) Cannot convert 'abc' to int!")
 
 #14. Use try/except/finally – even if there is an error, finally must print 'Finished'.
 
-
+try:
+    y = 10 / 0
+except ZeroDivisionError:
+    print("14.a) Error happened.")
+finally:
+    print("14.b) Baigta")
 
 #15. Create code where two possible errors may occur: division by 0 and invalid conversion.
 
-
+try:
+    num = int("abc")     # ValueError
+    z = 10 / 0           # ZeroDivisionError (won't reach if previous fails)
+except ValueError:
+    print("15) Invalid conversion to int.")
+except ZeroDivisionError:
+    print("15) Division by zero.")
 
 #16. Read a number as text, convert it to int with try/except.
 
-
+text_number = "123"  # (imituojam įvedimą)
+try:
+    n = int(text_number)
+    print("16.a) Converted:", n)
+except ValueError:
+    print("16.b) Not a valid integer.")
 
 #17. Create a function that raises an error if the entered number is negative.
 
+def check_positive(n: int) -> None:
+    if n < 0:
+        raise ValueError("Number must be non-negative!")
 
+try:
+    check_positive(-5)
+except ValueError as e:
+    print("17)", e)
 
 #18. Use an else block – if there is no error, print 'All good'.
 
-
+try:
+    value = int("42")
+except ValueError:
+    print("18) Error converting.")
+else:
+    print("18) Viskas gerai")
 
 #19. Check whether the file 'duomenys.txt' exists – if not, print a friendly message.
 
+import os
 
+filename = "pvz.jpg"
+if os.path.exists(filename):
+    print("19) File exists:", filename)
+else:
+    print("19) File does not exist:", filename)
 
 #20. Create a loop with try/except that tries to divide 100 by numbers in a list, 
 # where one of them is 0.
 
-
+numbers = [10, 5, 0, 2]
+print("10) Divisions:")
+for num in numbers:
+    try:
+        print(" 100 /", num, "=", 100 / num)
+    except ZeroDivisionError:
+        print(" 100 /", num, "= Cannot divide by zero!")
 
 
 ## Boolean tasks:
