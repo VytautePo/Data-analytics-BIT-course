@@ -220,30 +220,52 @@ for num in numbers:
 # 1. sentence = "Big data yra svarbi šiuolaikinei analitikai"
 # Check if the word "data" is in the sentence variable.
 
+sentence = "Big data yra svarbi šiuolaikinei analitikai"
+print("1.", "data" in sentence)
 
 # 2. Check if the name 'Asta' is in the list names = ['Jonas', 'Asta', 'Tomas'].
 
+names = ['Jonas', 'Asta', 'Tomas']
+print("2.", 'Asta' in names)
 
 # 3. Does the word 'Python' start with the letter 'P'?
 
+word3 = 'Python'
+print("3.", word3.startswith('P'))
 
 # 4. Does the word 'analitika' end with the letter 'a'?
 
+word4 = 'analitika'
+print("4.", word4.endswith('a'))
 
 # 5. Does the sentence 'Python yra naudingas' contain the word 'naudingas'?
 
+sentence5 = 'Python yra naudingas'
+print("5.", 'naudingas' in sentence5)
 
 # 6. Is the number 5 in the list skaiciai = [1, 2, 3, 4, 5, 6]?
 
+skaiciai = [1, 2, 3, 4, 5, 6]
+print("6.", 5 in skaiciai)
 
 # 7. Is user['logged_in'] True if user = {'name': 'Jonas', 'logged_in': True}?
 
+user = {'name': 'Jonas', 'logged_in': False}
+print("7.", user['logged_in'] == True) #or just print(user['logged_in']
 
 # 8. Check whether the list zodziai = ['duomenys', 'analizė', 'python'] contains at least one word longer than 7 characters.
 
+zodziai = ['duomenys', 'analize', 'python']
+result8 = any(len(zodis) > 7 for zodis in zodziai)
+print("8.", result8)
 
 # 9. Is x > 10 and x < 20 true if x = 15?
 
+x = 15
+print("9.", x > 10 and x < 20)
 
 # 10/ Create a variable email = 'jonas@example.com'
 # Check if email contains the '@' symbol.
+
+email = 'jonas@example.com'
+print("10.", '@' in email)
