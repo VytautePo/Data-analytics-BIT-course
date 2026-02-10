@@ -5,6 +5,7 @@ numpy
 openpyxl
 pandas
 plotly
+pymysql
 requests
 scikit-learn
 seaborn
