@@ -10,3 +10,5 @@ requests
 scikit-learn
 seaborn
 sqlalchemy
+scipy
+statsmodels scikit-learn
