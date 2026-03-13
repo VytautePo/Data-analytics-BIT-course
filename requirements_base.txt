@@ -12,3 +12,5 @@ seaborn
 sqlalchemy
 scipy
 statsmodels scikit-learn
+shap
+prophet
